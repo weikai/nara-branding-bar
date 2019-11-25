@@ -28,6 +28,11 @@ export class NaraBrandingBar extends LitElement {
         line-height: 1em !important;
         vertical-align: top;
       }
+      nara-logo {
+        height: 30px !important;
+        margin-left: 20px;
+        border: none;
+      }
 
     `;
   }
@@ -41,13 +46,9 @@ export class NaraBrandingBar extends LitElement {
 
   constructor() {
     super();
-    this.title = 'Hey there';
-    this.counter = 5;
+    this.title = 'NARA Branding Bar';
   }
 
-  __increment() {
-    this.counter += 1;
-  }
 
   firstUpdated(){
     this.shadowRoot.querySelector('[modal-id="smt1"]').associateEvents(this.shadowRoot.querySelector('[controls="smt1"]'));
@@ -56,7 +57,7 @@ export class NaraBrandingBar extends LitElement {
   render() {
     return html`
       <nara-logo format="horizontal"></nara-logo>
-      <button class="collapsible-mxg" @click=${this.__increment}>Explore our Websites</button>
+      <button class="collapsible-mxg" controls="smt1">Explore our Websites</button>
       <simple-modal-template modal-id="smt1" title="simple-modal-template 1"> <div slot="header">Simple Modal 1 Header</div> <p slot="content">Button 1 opens the first simple-modal-template template.</p> <div slot="buttons"><paper-button dialog-dismiss>Close Modal 1</paper-button></div> </simple-modal-template>
 
     
