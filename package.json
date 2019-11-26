@@ -23,7 +23,7 @@
     "storybook:build": "build-storybook"
   },
   "dependencies": {
-    "@lrnwebcomponents/simple-modal": "^2.2.2",
+    "@lrnwebcomponents/simple-modal": "^2.2.4",
     "lit-element": "^2.2.1",
     "lit-html": "^1.1.2",
     "nara-logo": "git+https://github.com/junkant/nara-logo.git"
