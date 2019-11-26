@@ -29,9 +29,15 @@ export class NaraBrandingBar extends LitElement {
         vertical-align: top;
       }
       nara-logo {
-        height: 30px !important;
         margin-left: 20px;
-        border: none;
+        float: left;
+        width: 230px;
+        height: 30px !important;
+      }
+      td.title{  
+        color: var(--blue-bg-color);
+        font-size: 20px;
+        font-weight: bold;
       }
 
     `;
@@ -58,7 +64,62 @@ export class NaraBrandingBar extends LitElement {
     return html`
       <nara-logo format="horizontal"></nara-logo>
       <button class="collapsible-mxg" controls="smt1">Explore our Websites</button>
-      <simple-modal-template modal-id="smt1" title="simple-modal-template 1"> <div slot="header">Simple Modal 1 Header</div> <p slot="content">Button 1 opens the first simple-modal-template template.</p> <div slot="buttons"><paper-button dialog-dismiss>Close Modal 1</paper-button></div> </simple-modal-template>
+      <simple-modal-template modal-id="smt1" title="US National Archives"> <div slot="header">Simple Modal 1 Header</div> 
+      
+        <table slot="content">
+          <tr>
+            <td class="title">Main Website</td>
+            <td class="title">For Research</td>
+            <td class="title">Presidential Libraries</td>
+            <td class="title">Presidential Libraries</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.archives.gov">National Archives</a></td>
+            <td><a href="https://catalog.archives.gov/">Catalog</a></td>
+            <td><a href="https://hoover.archives.gov/">Herbert Hoover Library and Museum</a></td>
+            <td><a href="http://www.fordlibrarymuseum.gov/">Gerald R. Ford Library and Museum</a></td>
+          </tr>
+          <tr>
+            <td class="title">Visit Us</td>
+            <td><a href="https://historyhub.history.gov/">History Hub</a></td>
+            <td><a href="https://fdrlibrary.org/">Franklin D. Roosevelt Library and Museum</a></td>
+            <td><a href="http://www.jimmycarterlibrary.gov/">Jimmy Carter Library and Museum</a></td>
+          </tr>
+          <tr>
+            <td><a href="https://museum.archives.gov/">National Archives Museum</a></td>
+            <td><a href="https://1940census.archives.gov/">1940 Census</a></td>
+            <td><a href="http://www.trumanlibrary.org/">Harry S. Truman Library and Museum</a></td>
+            <td><a href="http://www.reaganlibrary.gov/">Ronald Reagan Library and Museum</a></td>
+          </tr>
+          <tr>
+            <td><a href="https://www.archives.gov/locations">See All Locations</a></td>
+            <td><a href="https://founders.archives.gov/">Founders Online</a></td>
+            <td><a href="http://www.eisenhower.archives.gov/">Dwight D. Eisenhower Library and Museum</a></td>
+            <td><a href="https://bush41library.tamu.edu/">George Bush Library and Museum</a></td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td class="title">For Teachers</td>
+            <td><a href="http://www.jfklibrary.org/">John F. Kennedy Library and Museum</a></td>
+            <td><a href="https://www.clintonlibrary.gov/">William J. Clinton Library and Museum</a></td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td><a href="https://www.docsteach.org/">DocsTeach</a></td>
+            <td><a href="http://www.lbjlibrary.org/">Lyndon B. Johnson Library and Museum</a></td>
+            <td><a href="http://www.georgewbushlibrary.smu.edu/">George W. Bush Library and Museum</a></td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td><a href="https://www.ourdocuments.gov/">Our Documents</a></td>
+            <td><a href="http://www.nixonlibrary.gov/">Richard Nixon Library and Museum</a></td>
+            <td><a href="https://www.obamalibrary.gov/#">Barack Obama Library</a></td>
+          </tr>
+        </table>
+       
+      <div slot="buttons"><paper-button dialog-dismiss>Close</paper-button>
+      </div> 
+      </simple-modal-template>
 
     
     `;
