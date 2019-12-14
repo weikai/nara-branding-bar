@@ -87,3 +87,4 @@ export class NaraBrandingBar extends LitElement {
     `;
   }
 }
+window.customElements.define('nara-branding-bar', NaraBrandingBar);
