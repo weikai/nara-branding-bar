@@ -80,11 +80,24 @@ export class NaraBrandingBar extends LitElement {
   render() {
     return html`
       <nara-logo format="horizontal"></nara-logo>
-      <button class="collapsible-mxg" controls="smt1">${this.exploreText}</button>
+      <button @click="${this.clickEvent}" class="collapsible-mxg" controls="smt1">${this.exploreText}</button>
       <simple-modal-template modal-id="smt1" title="${this.title}">
         <slot slot="content"></slot>
       </simple-modal-template>
     `;
+  }
+
+  /**
+   * Notice the click event and redirect it to a specialized event we have
+   * @param {Event} e 
+   */
+  clickEvent() {
+    // Events always travel up, properties always travel down
+    // this custom message will be registered on the tag
+    // the parent can then set an event listener for this custom event
+    // this helps us form an internal API / converation between our elements
+    // so that they can pass data and user actions
+    this.dispatchEvent(new CustomEvent('nara-branding-modal-open'));
   }
 }
 window.customElements.define('nara-branding-bar', NaraBrandingBar);
