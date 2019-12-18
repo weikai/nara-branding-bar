@@ -3,30 +3,28 @@
   "tags": [
     {
       "name": "nara-branding-bar",
-      "description": "A component with a title and an action counter",
+      "attributes": [
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "exploreText",
+          "type": "string"
+        }
+      ],
       "properties": [
         {
           "name": "title",
-          "type": "String",
-          "description": "The title of your component",
-          "default": "Hey there"
+          "type": "string"
         },
         {
-          "name": "counter",
-          "type": "Number",
-          "description": "An action counter",
-          "default": 0
+          "name": "exploreText",
+          "type": "string"
         }
       ],
       "events": [],
-      "slots": [],
-      "cssProperties": [
-        {
-          "name": "--nara-branding-bar-text-color",
-          "description": "Main Text Color",
-          "type": "Color"
-        }
-      ]
+      "slots": []
     }
   ]
 }
