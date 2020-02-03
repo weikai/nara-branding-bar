@@ -12,6 +12,7 @@ export class NaraMenuBar extends LitElement {
       width: 300px;
       height: 80px;
       background-color: #FFFFFF;
+      border-radius: 25px;
     }
     `;
   }
