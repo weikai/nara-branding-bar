@@ -50,7 +50,7 @@ export class NaraBrandingBar extends LitElement {
   static get properties() {
     return {
       title: { type: String },
-      exploreText: { type: String },
+      exploreText: { type: String, attribute: 'explore-text' },
     };
   }
 
@@ -62,7 +62,9 @@ export class NaraBrandingBar extends LitElement {
     this.title = 'US National Archives';
     this.exploreText = 'Explore our Websites';
     // dynamic imports ensure things load faster
-    import('nara-logo/nara-logo.js');
+    setTimeout(() => {
+      import('nara-logo/nara-logo.js');      
+    }, 0);
   }
 
   /**
@@ -70,7 +72,7 @@ export class NaraBrandingBar extends LitElement {
    */
   firstUpdated() {
     this.shadowRoot
-      .querySelector('[modal-id="smt1"]')
+      .querySelector('[id="smt1"]')
       .associateEvents(this.shadowRoot.querySelector('[controls="smt1"]'));
   }
 
@@ -81,7 +83,7 @@ export class NaraBrandingBar extends LitElement {
     return html`
       <nara-logo format="horizontal"></nara-logo>
       <button @click="${this.clickEvent}" class="collapsible-mxg" controls="smt1">${this.exploreText}</button>
-      <simple-modal-template modal-id="smt1" title="${this.title}">
+      <simple-modal-template id="smt1" title="${this.title}">
         <slot slot="content"></slot>
       </simple-modal-template>
     `;
