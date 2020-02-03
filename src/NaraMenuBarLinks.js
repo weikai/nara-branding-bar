@@ -1,11 +1,20 @@
-import { html, css, LitElement } from 'lit-element';
+import { html, LitElement } from 'lit-element';
 
 export class NaraMenuBarLinks extends LitElement {
+  createRenderRoot() {
   /**
-   * LitElement render styles
+   * Render template without shadow DOM. Note that shadow DOM features like 
+   * encapsulated CSS and slots are unavailable.
    */
-  static get styles() {
-    return css`
+    return this;
+  }
+
+  /**
+   * LitElement render
+   */
+  render() {
+    return html`
+    <style>
       li.title{
         color: var(--blue-bg-color);
         font-size: 20px;
@@ -48,14 +57,7 @@ export class NaraMenuBarLinks extends LitElement {
         font-weight: normal !important;
         width: 100%;
       }
-    `;
-  }
-
-  /**
-   * LitElement render
-   */
-  render() {
-    return html`
+      </style>
     <div class="nara-links-grid">
       <div class="nara-links-col">
         <ul>
