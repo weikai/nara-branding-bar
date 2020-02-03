@@ -26,7 +26,9 @@ export class NaraMenuBar extends LitElement {
     // that are not mission critical. In this case, the branding bar is critcal
     // but has the modal in it which has a lot of code to make work
     // this ensures that when the team implements nara-menu-bar that it's ultra performant
-    import('./NaraBrandingBar.js');
+    setTimeout(() => {
+      import('./NaraBrandingBar.js');      
+    }, 0);
   }
 
   /**
