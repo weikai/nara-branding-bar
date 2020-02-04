@@ -25,7 +25,7 @@
     "build": "rimraf dist && rollup -c rollup.config.js"
   },
   "dependencies": {
-    "@lrnwebcomponents/simple-modal": "^2.2.4",
+    "@lrnwebcomponents/simple-modal": "^2.4.3",
     "lit-element": "^2.2.1",
     "lit-html": "^1.1.2",
     "nara-logo": "git+https://github.com/junkant/nara-logo.git"
