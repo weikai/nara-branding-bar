@@ -2,17 +2,17 @@ import { html, LitElement } from 'lit-element';
 
 export class NaraMenuBarLinks extends LitElement {
   createRenderRoot() {
-  /**
-   * Render template without shadow DOM. Note that shadow DOM features like 
-   * encapsulated CSS and slots are unavailable.
-   */
-  return this;
+    /**
+     * Render template without shadow DOM. Note that shadow DOM features like 
+     * encapsulated CSS and slots are unavailable.
+     */
+    return this;
   }
   render() {
     return html`
     <style>
       .nara-links-col .title-lp {
-        color: #205493;
+        color: #112e51;
         font-size: 20px;
         font-weight: bold;
         font-family: "Source Sans Pro","Helvetica Neue","Helvetica","Roboto","Arial",sans-serif;
@@ -26,6 +26,11 @@ export class NaraMenuBarLinks extends LitElement {
         line-height: 24px;
         font-family: "Source Sans Pro","Helvetica Neue","Helvetica","Roboto","Arial",sans-serif;
       }
+      .nara-links-col li a:active,
+      .nara-links-col li a:focus {
+        outline: 2px grey dotted;
+        outline-offset: 2px;
+      }
 
       .nara-links-col li a:hover {
         text-decoration: underline;
@@ -33,7 +38,7 @@ export class NaraMenuBarLinks extends LitElement {
 
       .nara-links-col ul li {  
         margin-bottom: 6px !important;
-        font-size: 16px !important;
+        font-size: 16px;
         font-weight: normal;
         background: none !important;
         margin: 0px 0px 6px 0px !important;
@@ -68,7 +73,7 @@ export class NaraMenuBarLinks extends LitElement {
         <ul>
           <li class="title-lp">Main Website</li>
           <li><a href="https://www.archives.gov">National Archives</a></li>
-          <li class="title">Visit Us</li>
+          <li class="title-lp">Visit Us</li>
           <li><a href="https://museum.archives.gov/">National Archives Museum</a></li>
           <li><a href="https://www.archives.gov/locations">See All Locations</a></li>
         </ul>

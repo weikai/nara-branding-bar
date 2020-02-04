@@ -41,6 +41,20 @@ export class NaraBrandingBar extends LitElement {
         height: 30px;
         display: inline-block;
       }
+      simple-modal-template {
+        --simple-modal-titlebar-color: black;
+        --simple-modal-titlebar-background: #FFFFFF;
+        --simple-modal-header-color: black;
+        --simple-modal-header-background: #FFFFFF;
+        --simple-modal-content-container-color: black;
+        --simple-modal-content-container-background: #FFFFFF;
+        --simple-modal-titlebar-button-border: 1px solid grey;
+        --simple-modal-titlebar-button-padding: 2px;
+        --simple-modal-titlebar-button-outline: 2px dotted grey;
+        --simple-modal-titlebar-button-outline-offset: 2px;
+        --simple-modal-titlebar-icon-width: 25px;
+        --simple-modal-titlebar-icon-height: 25px;
+      }
     `;
   }
 
@@ -83,7 +97,7 @@ export class NaraBrandingBar extends LitElement {
     return html`
       <nara-logo format="horizontal"></nara-logo>
       <button @click="${this.clickEvent}" class="collapsible-mxg" controls="smt1">${this.exploreText}</button>
-      <simple-modal-template id="smt1" title="${this.title}">
+      <simple-modal-template id="smt1">
         <slot slot="content"></slot>
       </simple-modal-template>
     `;
