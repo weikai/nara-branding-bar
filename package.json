@@ -31,6 +31,7 @@
     "nara-logo": "git+https://github.com/junkant/nara-logo.git"
   },
   "devDependencies": {
+    "rollup-plugin-cpy": "^2.0.1",
     "es-dev-server": "^1.5.0",
     "eslint": "^6.1.0",
     "@open-wc/eslint-config": "^2.0.0",
