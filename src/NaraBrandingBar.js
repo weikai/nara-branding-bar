@@ -10,7 +10,7 @@ export class NaraBrandingBar extends LitElement {
       :host {
         --nara-branding-bar-text-color: #000;
         display: block;
-        padding: 25px;
+        padding: 0px;
         color: var(--nara-branding-bar-text-color);
       }
       button {
@@ -95,7 +95,7 @@ export class NaraBrandingBar extends LitElement {
    */
   render() {
     return html`
-      <nara-logo format="horizontal"></nara-logo>
+      <nara-logo format="horizontal" webcBasePath="https://www.archives.gov/webc"></nara-logo>
       <button @click="${this.clickEvent}" class="collapsible-mxg" controls="smt1">${this.exploreText}</button>
       <simple-modal-template id="smt1">
         <slot slot="content"></slot>

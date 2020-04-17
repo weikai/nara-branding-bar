@@ -8,6 +8,7 @@ export class NaraMenuBarLinks extends LitElement {
      */
     return this;
   }
+
   render() {
     return html`
     <style>
@@ -62,7 +63,7 @@ export class NaraMenuBarLinks extends LitElement {
         }
       }
       .nara-links-col{
-        padding: 0 18px !important;
+        
         overflow: hidden;
         font-weight: normal !important;
         width: 100%;
@@ -101,15 +102,15 @@ export class NaraMenuBarLinks extends LitElement {
           <li><a href="https://fdrlibrary.archives.gov/">Franklin D. Roosevelt Library and Museum</a></li>
           <li><a href="https://www.trumanlibrary.gov/">Harry S. Truman Library and Museum</a></li>
           <li><a href="https://www.eisenhowerlibrary.gov/">Dwight D. Eisenhower Library and Museum</a></li>
-          <li><a href="https://www.jfklibrary.archives.gov/">John F. Kennedy Library and Museum</a></li>
-          <li><a href="https://www.lbjlibrary.archives.gov/">Lyndon B. Johnson Library and Museum</a></li>
+          <li><a href="https://jfklibrary.archives.gov/">John F. Kennedy Library and Museum</a></li>
+          <li><a href="https://lbjlibrary.archives.gov/">Lyndon B. Johnson Library and Museum</a></li>
           <li><a href="https://www.nixonlibrary.gov/">Richard Nixon Library and Museum</a></li>
         </ul>
       </div>
     <!--DIV BREAK -->
     <div class="nara-links-col">
         <ul>
-          <li class="title-lp">Presidential Libraries</li>
+          <li class="title-lp">&nbsp;</li>
           <li><a href="https://www.fordlibrarymuseum.gov/">Gerald R. Ford Library and Museum</a></li>
           <li><a href="https://www.jimmycarterlibrary.gov/">Jimmy Carter Library and Museum</a></li>
           <li><a href="https://www.reaganlibrary.gov/">Ronald Reagan Library and Museum</a></li>

@@ -28,7 +28,7 @@
     "@lrnwebcomponents/simple-modal": "^2.4.4",
     "lit-element": "^2.2.1",
     "lit-html": "^1.1.2",
-    "nara-logo": "git+https://github.com/junkant/nara-logo.git"
+    "nara-logo": "git+https://github.com/weikai/nara-logo.git"
   },
   "devDependencies": {
     "rollup-plugin-cpy": "^2.0.1",
@@ -54,12 +54,7 @@
       "eslint-config-prettier"
     ]
   },
-  "prettier": "@open-wc/prettier-config",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
+  "prettier": "@open-wc/prettier-config",  
   "lint-staged": {
     "*.js": [
       "eslint --fix",
